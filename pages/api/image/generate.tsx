@@ -5,24 +5,46 @@ export const config = {
 }
 
 export default function handler() {
+    const rand = parseInt(Math.random() * 10000 + '').toString().split('').reverse().join('') + parseInt(Math.random() * 10000 + '')
     return new ImageResponse(
         (
-          <div
+            <div
             style={{
-              fontSize: 34,
-              background: 'blue',
-              color: 'white',
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
+                display: 'flex',
+                height: '100%',
+                width: '100%',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                backgroundImage: 'linear-gradient(to bottom, #dbf4ff, #fff1f1)',
+                fontSize: 40,
+                letterSpacing: -2,
+                fontWeight: 700,
+                textAlign: 'center',
             }}
-          >
-            Next.js 13.3 generated image! -&nbsp;&nbsp;
-            <span>ID {parseInt(Math.random() * 10000 + '').toString().split('').reverse().join('') + parseInt(Math.random() * 10000 + '')}</span>
-          </div>
+            >
+                <div
+                    style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(121, 40, 202), rgb(255, 0, 128))',
+                    backgroundClip: 'text',
+                    '-webkit-background-clip': 'text',
+                    color: 'transparent',
+                    }}
+                >
+                    Next.js 13.3 generated image
+                </div>
+                <div
+                    style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(255, 77, 77), rgb(249, 203, 40))',
+                    backgroundClip: 'text',
+                    '-webkit-background-clip': 'text',
+                    color: 'transparent',
+                    fontSize: 30,
+                    }}
+                >
+                    {rand}
+                </div>
+            </div>
         ),
         {
           width: 1200,
