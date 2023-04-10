@@ -47,7 +47,7 @@ export default function handler() {
             </div>
         ),
         {
-          width: 1200,
+          width: 900,
           height: 600,
         },
       );
