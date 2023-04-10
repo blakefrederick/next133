@@ -16,7 +16,7 @@ export default function Home() {
           It's Next.js 13.3!
         </h1>
         <div>Now with dynamic image generation capabilities</div>
-        <button>Go</button>
+        <button className={styles.button}>Generate</button>
       </main>
     </div>
   )
